@@ -1,0 +1,30 @@
+{% extends "app/base.html" %} {% block content %}
+
+    <div class="">プロフィール</div>
+    <table class="">
+      <tbody>
+        <tr>
+          <th class="">氏名</th>
+          <td class="">{{ user_data.name }}</td>
+        </tr>
+        <tr>
+          <th class="">メールアドレス</th>
+          <td class="">{{ user_data.email }}</td>
+        </tr>
+        <tr>
+          <th class="">会社名</th>
+          <td class="">{{ user_data.company }}</td>
+        </tr>
+        <tr>
+          <th class="">入会日</th>
+          <td class="">{{ user_data.created }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="">
+      <a class="btn btn-warning" href="{% url 'profile_edit' %}">編集する</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

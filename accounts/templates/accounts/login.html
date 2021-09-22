@@ -1,0 +1,15 @@
+{% extends "app/base.html" %} {% load widget_tweaks %} {% block content %}
+
+<h5 class="">ログイン</h5>
+<form method="post" class="">
+  {% csrf_token %}
+  <div class="">
+    {% render_field form.login class="form-control" placeholder="メールアドレス" %}
+  </div>
+  <div class="">{% render_field form.password class="form-control" placeholder="パスワード" %}</div>
+  <div class="">
+    <button class="btn btn-primary" type="submit">ログイン</button>
+  </div>
+</form>
+
+{% endblock %}
